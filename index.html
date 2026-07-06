@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarkar Dipjoy - Bio</title>
-    <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #020617, #1e1b4b, #2e1065);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #020617, #1e1b4b, #2e1065, #0f172a);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            animation: gradientBG 12s ease infinite;
             color: #fff;
             display: flex;
             justify-content: center;
@@ -26,162 +20,86 @@
             padding: 20px;
             overflow-x: hidden;
         }
-
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         .container {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 40px 30px;
-            border-radius: 30px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            padding: 40px 25px;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
             text-align: center;
-            max-width: 400px;
+            max-width: 360px;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-
-        /* Glass Icon Style (No Face) */
         .profile-icon {
-            font-size: 60px;
-            width: 120px;
-            height: 120px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            font-size: 50px;
+            width: 110px;
+            height: 110px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(165, 180, 252, 0.4);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0 auto 25px;
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
-            animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+            animation: float 3s ease-in-out infinite;
         }
-
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.03); }
         }
-
-        @keyframes glow {
-            from { box-shadow: 0 0 10px rgba(99, 102, 241, 0.2); }
-            to { box-shadow: 0 0 30px rgba(165, 180, 252, 0.5); }
-        }
-
-        h1 {
-            font-size: 26px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-            background: linear-gradient(to right, #fff, #a5b4fc, #fdf2f8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p.username {
-            font-size: 16px;
-            color: #a5b4fc;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
+        h1 { font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: 1.5px; }
+        p.username { font-size: 14px; color: #94a3b8; margin-bottom: 30px; }
         .bio-section {
             text-align: left;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 25px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 22px;
             border-radius: 20px;
-            margin-bottom: 35px;
-            font-size: 15px;
-            line-height: 2;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            animation: fadeIn 2s;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.9;
         }
-
-        .bio-section p {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .bio-section p:last-child {
-            margin-bottom: 0;
-        }
-
-        .icon-p {
-            margin-right: 12px;
-            font-size: 18px;
-            color: #a5b4fc;
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
+        .bio-item { display: flex; align-items: center; margin-bottom: 12px; }
+        .icon-p { margin-right: 12px; font-size: 18px; background: rgba(255, 255, 255, 0.08); padding: 4px 8px; border-radius: 8px; }
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             color: #fff;
             text-decoration: none;
-            padding: 16px;
-            border-radius: 50px;
+            padding: 15px;
+            border-radius: 16px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s;
+            margin-bottom: 14px;
         }
-
-        .btn:hover {
-            background: #fff;
-            color: #1e1b4b;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn i {
-            font-size: 18px;
-        }
-
+        .btn:hover { background: #fff; color: #0f172a; transform: translateY(-4px); }
     </style>
 </head>
 <body>
-
     <div class="container animate__animated animate__fadeInUp">
-        <!-- 
-           फेस ছাড়া কালচারাল/মিউজিক্যাল আইকন। 
-           আপনি চাইলে নিচের '🪘' (তবলা) পরিবর্তন করে অন্য কিছু দিতে পারেন।
-           অন্যান্য অপশন: 🎸 (গিটার), 🎹 (কিবোর্ড), 🎨 (আর্ট), 🎤 (মাইক), 📖 (বই)
-        -->
         <div class="profile-icon">🪘</div>
-        
-        <h1 class="animate__animated animate__zoomIn animate__delay-1s">SARKAR DIPJOY</h1>
+        <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
-        
         <div class="bio-section animate__animated animate__fadeIn animate__delay-1s">
-            <p><span class="icon-p">📰</span> चाइल्ड जर्नलिस्ट</p>
-            <p><span class="icon-p">🎶</span> तबला ও ইউকুলেলে প্লেয়ার</p>
-            <p><span class="icon-p">👨‍🍳</span> কিচেন এক্সপেরিমেন্টার</p>
-            <p><span class="icon-p">🔬</span> বাগেরহাট সরকারি উচ্চ বিদ্যালয় (নবম শ্রেণি)</p>
-            <p><span class="icon-p">🎂</span> ০৮.০৮</p>
+            <div class="bio-item"><span class="icon-p">📰</span> Child Journalist</div>
+            <div class="bio-item"><span class="icon-p">🎶</span> Tabla & Ukulele Player</div>
+            <div class="bio-item"><span class="icon-p">👨‍🍳</span> Kitchen Experimenter</div>
+            <div class="bio-item"><span class="icon-p">🔬</span> Bagerhat Govt High School</div>
+            <div class="bio-item"><span class="icon-p">🎂</span> 08.08</div>
         </div>
-
         <div class="links-container">
-            <a href="https://hello.bdnews24.com" class="btn animate__animated animate__fadeInLeft animate__delay-2s" target="_blank">
-                📰 বিডিনিউজ২৪-এ আমার রিপোর্ট
-            </a>
-            <a href="https://instagram.com/sarkar_turzo" class="btn animate__animated animate__fadeInRight animate__delay-2s" target="_blank">
-                📸 ইনস্টাগ্রাম প্রোফাইল
-            </a>
+            <a href="https://hello.bdnews24.com" class="btn" target="_blank">📰 My Reports on bdnews24</a>
+            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank">📸 Instagram Profile</a>
         </div>
     </div>
-
 </body>
 </html>
