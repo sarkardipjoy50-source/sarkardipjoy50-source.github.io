@@ -9,90 +9,65 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb, #e0f2fe);
-            color: #2c3e50;
+            font-family: 'Georgia', serif;
+            background: #f4ebd0;
+            color: #4a3728;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-        /* Soft Ghibli Clouds Effect */
-        body::before, body::after {
-            content: "☁️";
-            position: absolute;
-            font-size: 80px;
-            opacity: 0.25;
-            animation: cloudMove 20s linear infinite;
-        }
-        body::before { top: 10%; left: -10%; }
-        body::after { bottom: 15%; right: -10%; animation-delay: 10s; direction: reverse; }
-        @keyframes cloudMove {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(120vw); }
         }
         .container {
-            background: rgba(255, 255, 255, 0.55);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 40px 25px;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            background: #fcf8f2;
+            padding: 40px 30px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(74, 55, 40, 0.15);
             text-align: center;
             max-width: 360px;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 2px solid #d5c3aa;
+            outline: 1px solid #4a3728;
+            outline-offset: -10px;
         }
         .profile-icon {
-            font-size: 50px;
-            width: 100px;
-            height: 100px;
-            background: #fff;
-            border: 3px solid #7dd3fc;
+            font-size: 45px;
+            width: 90px;
+            height: 90px;
+            background: #f4ebd0;
+            border: 2px solid #4a3728;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            animation: float 4s ease-in-out infinite;
+            margin: 10px auto 25px;
         }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        h1 { font-size: 22px; font-weight: 800; color: #0f172a; letter-spacing: 1px; }
-        p.username { font-size: 13px; color: #64748b; margin-bottom: 25px; font-weight: 600; }
+        h1 { font-size: 24px; font-weight: 700; color: #2b1f16; letter-spacing: 1px; font-family: 'Georgia', serif; }
+        p.username { font-size: 13px; color: #7a624e; margin-bottom: 25px; font-style: italic; }
         .bio-section {
             text-align: left;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 25px;
+            border-top: 1px dashed #d5c3aa;
+            border-bottom: 1px dashed #d5c3aa;
+            padding: 20px 5px;
+            margin-bottom: 30px;
             font-size: 14px;
-            line-height: 1.8;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            line-height: 1.9;
         }
-        .bio-item { display: flex; align-items: center; margin-bottom: 12px; color: #334155; }
+        .bio-item { display: flex; align-items: center; margin-bottom: 12px; }
         .bio-item:last-child { margin-bottom: 0; }
-        .icon-p {
-            margin-right: 12px; font-size: 14px; background: #e0f2fe; color: #0369a1;
-            width: 30px; height: 30px; border-radius: 8px; display: flex; justify-content: center; align-items: center;
-        }
+        .icon-p { margin-right: 15px; font-size: 15px; color: #7a624e; }
         .links-container { display: flex; flex-direction: column; gap: 12px; }
         .btn {
             display: flex; align-items: center; justify-content: center; gap: 10px;
-            background: #0284c7; color: #fff; text-decoration: none; padding: 14px;
-            border-radius: 12px; font-weight: 600; font-size: 14px; transition: all 0.3s;
+            background: #4a3728; color: #fcf8f2; text-decoration: none; padding: 14px;
+            border-radius: 2px; font-weight: 600; font-size: 14px; transition: all 0.3s;
+            border: 1px solid #4a3728;
         }
-        .btn:hover { background: #0369a1; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(2, 132, 199, 0.3); }
+        .btn:hover { background: #fcf8f2; color: #4a3728; }
     </style>
 </head>
 <body>
-    <div class="container animate__animated animate__fadeInUp">
+    <div class="container animate__animated animate__fadeIn">
         <div class="profile-icon">🪘</div>
         <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
@@ -104,8 +79,8 @@
             <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-cake-candles"></i></span><span>August 08</span></div>
         </div>
         <div class="links-container">
-            <a href="https://hello.bdnews24.com" class="btn" target="_blank"> My Reports on bdnews24</a>
-            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank"> Instagram Profile</a>
+            <a href="https://hello.bdnews24.com" class="btn" target="_blank">My Reports on bdnews24</a>
+            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank">Instagram Profile</a>
         </div>
     </div>
 </body>
