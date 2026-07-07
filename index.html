@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkar Dipjoy | Science, Media & Arts</title>
-    <!-- External Dependencies for Aesthetics -->
+    <title>Sarkar Dipjoy | Magic Space</title>
+    <!-- Beautiful Icons and Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,9 +16,11 @@
 
         body {
             font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-            /* Aurora Mist Background - Ultra Premium Light/Sophisticated Aesthetic */
-            background: radial-gradient(circle at 20% 20%, #eef2f3 0%, #e4e7eb 50%, #d5dbdb 100%);
-            color: #1e293b;
+            /* Ultra-Cute Soft Pastel Dream Background */
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1, #ffb3c6, #e0f2fe, #f0fdf4);
+            background-size: 400% 400%;
+            animation: pastelFlow 12s ease infinite;
+            color: #4f46e5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,152 +30,176 @@
             position: relative;
         }
 
-        /* Ambient Glow behind the container */
-        body::before {
-            content: "";
-            position: absolute;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, rgba(168, 85, 247, 0.05) 70%, transparent 100%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-            pointer-events: none;
+        @keyframes pastelFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        .master-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            padding: 50px 35px;
-            border-radius: 36px;
-            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.04), 
-                        0 2px 8px rgba(15, 23, 42, 0.02),
-                        inset 0 1px 0px rgba(255, 255, 255, 0.6);
-            text-align: center;
-            max-width: 390px;
+        /* Floating Sparkles & Hearts Background Animation */
+        .sparkle-bg {
+            position: absolute;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            height: 100%;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .sparkle-bg::before, .sparkle-bg::after {
+            content: "✨ 💕 🌸 ✨ 🎵";
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.3;
+            animation: floatSparkles 8s linear infinite;
+        }
+        .sparkle-bg::before { left: 10%; top: 20%; animation-delay: 1s; }
+        .sparkle-bg::after { right: 10%; bottom: 20%; animation-delay: 4s; }
+
+        @keyframes floatSparkles {
+            0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.4; }
+            100% { transform: translateY(-100px) scale(1.2) rotate(360deg); opacity: 0; }
+        }
+
+        /* Premium Glass Card with Soft Pink Border */
+        .cute-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 45px 30px;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(255, 179, 198, 0.4), 
+                        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+            text-align: center;
+            max-width: 375px;
+            width: 100%;
+            border: 2px solid rgba(255, 182, 193, 0.5);
             z-index: 1;
             position: relative;
+            animation: cardEntrance 1s ease-out;
         }
 
-        /* The Fusion Core Avatar (Science meets Art - No Face) */
-        .avatar-container {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+        /* Cute Science & Art Hybrid Graphic (No Face) */
+        .magic-core {
+            width: 115px;
+            height: 115px;
+            background: linear-gradient(135deg, #ff85a1, #ffb3c6);
             border-radius: 50%;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+            box-shadow: 0 12px 25px rgba(255, 133, 161, 0.4);
             position: relative;
+            animation: gentleFloat 4s ease-in-out infinite;
         }
 
-        /* Atomic Quantum Orbit Ring */
-        .quantum-ring {
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Magical Orbit Ring (Science) */
+        .magic-orbit {
             position: absolute;
-            width: 90px;
+            width: 95px;
             height: 35px;
-            border: 1.5px solid rgba(14, 165, 233, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
             border-radius: 50%;
-            animation: rotateQuantum 5s linear infinite;
+            animation: spinOrbit 4s linear infinite;
         }
-        .quantum-ring:nth-child(2) {
-            animation: rotateQuantum 5s linear infinite reverse;
-            transform: rotate(60deg);
-            border-color: rgba(168, 85, 247, 0.5);
+        .magic-orbit::after {
+            content: "✨";
+            position: absolute;
+            top: -10px; left: 50%;
+            font-size: 14px;
         }
 
-        /* Pulse Waves representing Music */
-        .audio-bars {
+        /* Sweet Bouncing Music Waves (Arts) */
+        .cute-waves {
             display: flex;
             gap: 4px;
-            z-index: 2;
             align-items: center;
+            z-index: 2;
         }
-        .bar {
-            width: 3.5px;
+        .cute-bar {
+            width: 4px;
             background: #ffffff;
             border-radius: 2px;
-            animation: soundWave 1.2s ease-in-out infinite;
+            animation: cutePulse 1s ease-in-out infinite;
         }
-        .bar:nth-child(1) { height: 18px; animation-delay: 0.1s; }
-        .bar:nth-child(2) { height: 28px; animation-delay: 0.3s; }
-        .bar:nth-child(3) { height: 38px; animation-delay: 0.5s; }
-        .bar:nth-child(4) { height: 24px; animation-delay: 0.2s; }
+        .cute-bar:nth-child(1) { height: 16px; animation-delay: 0.1s; }
+        .cute-bar:nth-child(2) { height: 32px; animation-delay: 0.3s; }
+        .cute-bar:nth-child(3) { height: 22px; animation-delay: 0.5s; }
 
-        @keyframes rotateQuantum {
+        @keyframes spinOrbit {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        @keyframes soundWave {
-            0%, 100% { transform: scaleY(0.4); opacity: 0.7; }
-            50% { transform: scaleY(1); opacity: 1; }
+        @keyframes cutePulse {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1.3); }
         }
 
         h1 {
             font-size: 24px;
             font-weight: 800;
-            margin-bottom: 6px;
-            letter-spacing: 2px;
-            color: #0f172a;
-            text-transform: uppercase;
+            color: #4a4e69;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
         p.username {
-            font-size: 12px;
-            color: #64748b;
-            margin-bottom: 35px;
+            font-size: 13px;
+            color: #9a8c98;
+            margin-bottom: 30px;
             font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* High-End Structured Bio Showcase */
+        /* Beautiful and Cozy Showcase Box */
         .showcase-box {
             text-align: left;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.5);
             padding: 24px;
             border-radius: 24px;
             margin-bottom: 35px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 20px rgba(255, 179, 198, 0.05);
         }
 
         .showcase-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
+            transition: transform 0.2s;
         }
+        .showcase-item:hover { transform: translateX(3px); }
         .showcase-item:last-child { margin-bottom: 0; }
 
-        .badge-icon {
-            margin-right: 16px;
-            font-size: 14px;
-            background: #ffffff;
-            color: #334155;
-            width: 36px;
-            height: 36px;
+        .cute-badge {
+            margin-right: 14px;
+            font-size: 15px;
+            background: #fff0f3;
+            color: #ff4d6d;
+            width: 34px;
+            height: 34px;
             border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
-            border: 1px solid rgba(15, 23, 42, 0.05);
+            border: 1px solid #ffccd5;
+            box-shadow: 0 4px 8px rgba(255, 77, 109, 0.05);
         }
 
         .showcase-text {
-            font-size: 14.5px;
+            font-size: 14px;
             font-weight: 600;
-            color: #475569;
-            letter-spacing: 0.2px;
+            color: #5c5a76;
         }
 
-        /* Fluid Premium Buttons */
+        /* Bouncy Bubble Buttons */
         .action-container {
             display: flex;
             flex-direction: column;
@@ -184,15 +210,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #0f172a;
+            background: #ff758f;
             color: #ffffff;
             text-decoration: none;
             padding: 16px 24px;
-            border-radius: 16px;
-            font-weight: 600;
+            border-radius: 20px;
+            font-weight: 700;
             font-size: 14.5px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border: 1px solid #0f172a;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #ff758f;
+            box-shadow: 0 8px 20px rgba(255, 117, 143, 0.2);
         }
 
         .btn-core {
@@ -201,87 +228,89 @@
             gap: 12px;
         }
 
-        .action-btn i.arrow-indicator {
-            font-size: 11px;
-            opacity: 0.4;
+        .action-btn i.heart-icon {
+            font-size: 12px;
+            opacity: 0.6;
             transition: transform 0.3s;
         }
 
         .action-btn:hover {
-            background: rgba(255, 255, 255, 0.95);
-            color: #0f172a;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-            border-color: rgba(15, 23, 42, 0.1);
+            background: #ffffff;
+            color: #ff758f;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(255, 117, 143, 0.3);
+            border-color: #ff85a1;
         }
 
-        .action-btn:hover i.arrow-indicator {
-            transform: translateX(4px);
+        .action-btn:hover i.heart-icon {
+            transform: scale(1.4);
+            color: #ff4d6d;
             opacity: 1;
         }
     </style>
 </head>
 <body>
 
-    <div class="master-card animate__animated animate__fadeInUp">
+    <div class="sparkle-bg"></div>
+
+    <div class="cute-card animate__animated animate__bounceIn">
         
-        <!-- Science + Music Core Concept Graphic Wrapper -->
-        <div class="avatar-container">
-            <div class="quantum-ring"></div>
-            <div class="quantum-ring"></div>
-            <div class="audio-bars">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+        <!-- The Magical Science + Art Hybrid Core -->
+        <div class="magic-core">
+            <div class="magic-orbit"></div>
+            <div class="cute-waves">
+                <div class="cute-bar"></div>
+                <div class="cute-bar"></div>
+                <div class="cute-bar"></div>
             </div>
         </div>
         
         <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
         
-        <!-- Premium Bio Grid Info -->
-        <div class="showcase-box animate__animated animate__fadeIn animate__delay-1s">
+        <!-- Beautiful Cozy Grid Information -->
+        <div class="showcase-box">
             <div class="showcase-item">
-                <div class="badge-icon"><i class="fa-solid fa-flask-vial"></i></div>
-                <div class="showcase-text">Science Student</div>
+                <div class="cute-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="showcase-text">Passionate Science Student</div>
             </div>
             <div class="showcase-item">
-                <div class="badge-icon"><i class="fa-solid fa-microphone-lines"></i></div>
-                <div class="showcase-text">Child Journalist</div>
+                <div class="cute-badge"><i class="fa-solid fa-feather-pointed"></i></div>
+                <div class="showcase-text">Inspiring Child Journalist</div>
             </div>
             <div class="showcase-item">
-                <div class="badge-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="cute-badge"><i class="fa-solid fa-heart-pulse"></i></div>
                 <div class="showcase-text">Tabla & Ukulele Player</div>
             </div>
             <div class="showcase-item">
-                <div class="badge-icon"><i class="fa-solid fa-school"></i></div>
+                <div class="cute-badge"><i class="fa-solid fa-graduation-cap"></i></div>
                 <div class="showcase-text">Bagerhat Govt High School (Class 9)</div>
             </div>
             <div class="showcase-item">
-                <div class="badge-icon"><i class="fa-solid fa-calendar-day"></i></div>
-                <div class="showcase-text">August 08</div>
+                <div class="cute-badge"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="showcase-text">Sweet Birthday • August 08</div>
             </div>
         </div>
 
-        <!-- Premium Navigation Links -->
+        <!-- Premium Bouncy Navigation Links -->
         <div class="action-container">
             <a href="https://hello.bdnews24.com" class="action-btn" target="_blank">
                 <span class="btn-core">
-                    <i class="fa-solid fa-feather"></i>
-                    My Reports on bdnews24
+                    <i class="fa-solid fa-book-open"></i>
+                    Read My Stories on bdnews24
                 </span>
-                <i class="fa-solid fa-chevron-right arrow-indicator"></i>
+                <i class="fa-solid fa-heart heart-icon"></i>
             </a>
             <a href="https://instagram.com/sarkar_turzo" class="action-btn" target="_blank">
                 <span class="btn-core">
                     <i class="fa-brands fa-instagram"></i>
-                    Instagram Profile
+                    Catch Me On Instagram
                 </span>
-                <i class="fa-solid fa-chevron-right arrow-indicator"></i>
+                <i class="fa-solid fa-heart heart-icon"></i>
             </a>
         </div>
     </div>
 
 </body>
-</html>
+                    </html>
+                    
