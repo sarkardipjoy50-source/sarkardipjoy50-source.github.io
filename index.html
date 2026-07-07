@@ -7,262 +7,106 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: #030712;
-            color: #f3f4f6;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb, #e0f2fe);
+            color: #2c3e50;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            overflow-x: hidden;
+            overflow: hidden;
             position: relative;
         }
-
-        /* Animated Ambient Glowing Background */
+        /* Soft Ghibli Clouds Effect */
         body::before, body::after {
-            content: "";
+            content: "☁️";
             position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #a855f7);
-            filter: blur(130px);
-            z-index: -1;
-            opacity: 0.4;
-            animation: pulseGlow 8s infinite alternate;
+            font-size: 80px;
+            opacity: 0.25;
+            animation: cloudMove 20s linear infinite;
         }
-
-        body::before { top: -50px; left: -50px; }
-        body::after { bottom: -50px; right: -50px; animation-delay: 4s; }
-
-        @keyframes pulseGlow {
-            0% { transform: scale(1) translate(0, 0); opacity: 0.3; }
-            100% { transform: scale(1.2) translate(30px, 20px); opacity: 0.5; }
+        body::before { top: 10%; left: -10%; }
+        body::after { bottom: 15%; right: -10%; animation-delay: 10s; direction: reverse; }
+        @keyframes cloudMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(120vw); }
         }
-
         .container {
-            background: rgba(15, 23, 42, 0.45);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            padding: 45px 30px;
-            border-radius: 32px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 
-                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px 25px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             text-align: center;
-            max-width: 380px;
+            max-width: 360px;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
-
-        /* Cyber-Cultural Music Pulse Avatar (No Face) */
-        .avatar-wrapper {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 25px;
-        }
-
         .profile-icon {
-            font-size: 55px;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
-            border: 2px solid rgba(165, 180, 252, 0.5);
+            font-size: 50px;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border: 3px solid #7dd3fc;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2;
-            position: relative;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
             animation: float 4s ease-in-out infinite;
         }
-
-        .pulse-ring {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: 2px solid #818cf8;
-            border-radius: 50%;
-            opacity: 0;
-            animation: wavePulse 3s linear infinite;
-        }
-        .pulse-ring:nth-child(2) { animation-delay: 1.5s; }
-
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-6px); }
         }
-
-        @keyframes wavePulse {
-            0% { transform: scale(1); opacity: 0.5; }
-            50% { opacity: 0.3; }
-            100% { transform: scale(1.3); opacity: 0; }
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 6px;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #ffffff, #c7d2fe, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p.username {
-            font-size: 13px;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        /* High-End Bio Box */
+        h1 { font-size: 22px; font-weight: 800; color: #0f172a; letter-spacing: 1px; }
+        p.username { font-size: 13px; color: #64748b; margin-bottom: 25px; font-weight: 600; }
         .bio-section {
             text-align: left;
-            background: rgba(3, 7, 18, 0.4);
-            padding: 24px;
-            border-radius: 24px;
-            margin-bottom: 35px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
             font-size: 14px;
-            line-height: 2;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            line-height: 1.8;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
-
-        .bio-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 14px;
-            color: #e5e7eb;
-        }
-
+        .bio-item { display: flex; align-items: center; margin-bottom: 12px; color: #334155; }
         .bio-item:last-child { margin-bottom: 0; }
-
         .icon-p {
-            margin-right: 15px;
-            font-size: 16px;
-            background: rgba(99, 102, 241, 0.15);
-            color: #a5b4fc;
-            width: 32px;
-            height: 32px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            margin-right: 12px; font-size: 14px; background: #e0f2fe; color: #0369a1;
+            width: 30px; height: 30px; border-radius: 8px; display: flex; justify-content: center; align-items: center;
         }
-
-        /* Futuristic Glowing Buttons */
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
+        .links-container { display: flex; flex-direction: column; gap: 12px; }
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(255, 255, 255, 0.03);
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 24px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: #0284c7; color: #fff; text-decoration: none; padding: 14px;
+            border-radius: 12px; font-weight: 600; font-size: 14px; transition: all 0.3s;
         }
-
-        .btn-content {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .btn i.arrow {
-            font-size: 12px;
-            opacity: 0.5;
-            transition: transform 0.3s;
-        }
-
-        .btn:hover {
-            background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-            border-color: rgba(165, 180, 252, 0.6);
-            box-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
-            transform: translateY(-3px);
-            color: #fff;
-        }
-
-        .btn:hover i.arrow {
-            transform: translateX(5px);
-            opacity: 1;
-        }
+        .btn:hover { background: #0369a1; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(2, 132, 199, 0.3); }
     </style>
 </head>
 <body>
-
     <div class="container animate__animated animate__fadeInUp">
-        
-        <div class="avatar-wrapper">
-            <div class="pulse-ring"></div>
-            <div class="pulse-ring"></div>
-            <div class="profile-icon">🪘</div>
-        </div>
-        
-        <h1 class="animate__animated animate__zoomIn animate__delay-1s">SARKAR DIPJOY</h1>
+        <div class="profile-icon">🪘</div>
+        <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
-        
-        <div class="bio-section animate__animated animate__fadeIn animate__delay-1s">
-            <div class="bio-item">
-                <span class="icon-p"><i class="fa-solid fa-newspaper"></i></span>
-                <span>Child Journalist</span>
-            </div>
-            <div class="bio-item">
-                <span class="icon-p"><i class="fa-solid fa-music"></i></span>
-                <span>Tabla & Ukulele Player</span>
-            </div>
-            <div class="bio-item">
-                <span class="icon-p"><i class="fa-solid fa-utensils"></i></span>
-                <span>Kitchen Experimenter</span>
-            </div>
-            <div class="bio-item">
-                <span class="icon-p"><i class="fa-solid fa-graduation-cap"></i></span>
-                <span>Bagerhat Govt High School</span>
-            </div>
-            <div class="bio-item">
-                <span class="icon-p"><i class="fa-solid fa-cake-candles"></i></span>
-                <span>August 08</span>
-            </div>
+        <div class="bio-section">
+            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-newspaper"></i></span><span>Child Journalist</span></div>
+            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-music"></i></span><span>Tabla & Ukulele Player</span></div>
+            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-utensils"></i></span><span>Kitchen Experimenter</span></div>
+            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-graduation-cap"></i></span><span>Bagerhat Govt High School (Class 9)</span></div>
+            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-cake-candles"></i></span><span>August 08</span></div>
         </div>
-
         <div class="links-container">
-            <a href="https://hello.bdnews24.com" class="btn" target="_blank">
-                <span class="btn-content">
-                    <i class="fa-solid fa-feather-pointed" style="color: #a5b4fc;"></i>
-                    My Reports on bdnews24
-                </span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </a>
-            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank">
-                <span class="btn-content">
-                    <i class="fa-brands fa-instagram" style="color: #f472b6;"></i>
-                    Instagram Profile
-                </span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </a>
+            <a href="https://hello.bdnews24.com" class="btn" target="_blank"> My Reports on bdnews24</a>
+            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank"> Instagram Profile</a>
         </div>
     </div>
-
 </body>
 </html>
