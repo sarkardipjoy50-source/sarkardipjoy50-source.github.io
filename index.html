@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkar Dipjoy | Premium Bright Space</title>
-    <!-- Modern Dynamic CSS Libraries -->
+    <title>Sarkar Dipjoy | Artistic Cultural Space</title>
+    <!-- Beautiful Icons and Typography -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and Base Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -16,318 +15,255 @@
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: #f4f7f6;
-            color: #1e293b;
+            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+            /* Exact ScreenShot Inspired Vibrant Lime Background (স্ক্রিনশটের সেই উজ্জ্বল ও প্রাণবন্ত ব্যাকগ্রাউন্ড) */
+            background-color: #bfdb38; 
+            color: #132a13;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 25px;
+            padding: 24px;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* 1. Bright Liquid Aurora Kinetic Background (উজ্জ্বল ও প্রিমিয়াম রঙের মেলা) */
-        .bright-aurora-bg {
+        /* Subtle Cultural Floating Sparkles in Background */
+        .cultural-bg-art {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background: linear-gradient(135deg, #e0f2fe, #f0fdf4, #fef9c3);
-        }
-
-        .bright-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.65;
-            animation: orbMove 10s infinite alternate ease-in-out;
-        }
-
-        .orb-1 { width: 450px; height: 450px; background: #38bdf8; top: -10%; left: -10%; }
-        .orb-2 { width: 500px; height: 500px; background: #818cf8; bottom: -20%; right: -10%; animation-delay: 2s; }
-        .orb-3 { width: 350px; height: 350px; background: #34d399; top: 30%; left: 40%; animation-delay: 4s; }
-
-        @keyframes orbMove {
-            0% { transform: scale(1) translate(0, 0) rotate(0deg); }
-            50% { transform: scale(1.2) translate(40px, -30px) rotate(180deg); }
-            100% { transform: scale(0.9) translate(-20px, 40px) rotate(360deg); }
-        }
-
-        /* 2. Premium White-Gold Glassmorphism Container */
-        .bright-container {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            padding: 50px 35px;
-            border-radius: 36px;
-            box-shadow: 0 20px 50px rgba(14, 165, 233, 0.15), 
-                        inset 0 1px 2px rgba(255, 255, 255, 0.6);
-            text-align: center;
-            max-width: 400px;
             width: 100%;
-            position: relative;
+            height: 100%;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .cultural-bg-art::before, .cultural-bg-art::after {
+            content: "🎵 ✨ 🌸 🍃 ✨ 🎶";
+            position: absolute;
+            font-size: 26px;
+            opacity: 0.25;
+            animation: floatArt 8s linear infinite;
+        }
+        .cultural-bg-art::before { left: 8%; top: 15%; animation-delay: 0s; }
+        .cultural-bg-art::after { right: 8%; bottom: 15%; animation-delay: 3s; }
+
+        @keyframes floatArt {
+            0% { transform: translateY(0) scale(1) rotate(0deg); }
+            50% { transform: translateY(-30px) scale(1.1) rotate(180deg); }
+            100% { transform: translateY(0) scale(1) rotate(360deg); }
+        }
+
+        /* Beautiful Hand-Crafted Premium Card */
+        .artistic-card {
+            background: #ffffff;
+            padding: 45px 28px;
+            border-radius: 32px;
+            /* Solid Bold High-Contrast Shadow from the Screenshot Style */
+            box-shadow: 10px 10px 0px #132a13;
+            border: 3.5px solid #132a13;
+            text-align: center;
+            max-width: 385px;
+            width: 100%;
             z-index: 10;
-            overflow: hidden;
-            /* Premium gradient glowing border */
-            border: 2px solid transparent;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), 
-                              linear-gradient(135deg, #38bdf8, #818cf8, #34d399);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
-            animation: containerGlow 6s infinite alternate;
+            position: relative;
         }
 
-        @keyframes containerGlow {
-            0% { box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15); }
-            100% { box-shadow: 0 20px 40px rgba(52, 211, 153, 0.25); }
-        }
-
-        /* 3. Quantum-Audio Interactive Bright Core */
-        .quantum-graphic {
-            width: 125px;
-            height: 125px;
-            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+        /* The Ultimate Science & Melody Fusion Core Logo */
+        .fusion-core {
+            width: 110px;
+            height: 110px;
+            background: #ff6b6b; /* Vibrant Coral Red */
             border-radius: 50%;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 3px solid #132a13;
+            box-shadow: 5px 5px 0px #132a13;
             position: relative;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(255, 255, 255, 1);
-            border: 1px solid rgba(14, 165, 233, 0.2);
+            animation: gentleBounce 4s ease-in-out infinite;
         }
 
-        /* 3D Atomic Orbit Rings (Science) */
-        .atom-ring {
+        @keyframes gentleBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Orbital Science Ring */
+        .orbit-ring {
             position: absolute;
-            width: 100px;
-            height: 38px;
-            border: 2px solid rgba(56, 189, 248, 0.7);
+            width: 90px;
+            height: 32px;
+            border: 2.5px solid #ffffff;
             border-radius: 50%;
-            animation: spinAtomX 4s linear infinite;
-            transform-style: preserve-3d;
-        }
-        .atom-ring:nth-child(2) {
-            transform: rotate(60deg);
-            border-color: rgba(129, 140, 248, 0.7);
-            animation: spinAtomY 5s linear infinite reverse;
-        }
-        .atom-ring:nth-child(3) {
-            transform: rotate(-60deg);
-            border-color: rgba(52, 211, 153, 0.7);
-            animation: spinAtomZ 6s linear infinite;
+            animation: spinRing 4s linear infinite;
         }
 
-        @keyframes spinAtomX { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        @keyframes spinAtomY { 0% { transform: rotate(60deg) rotateX(0deg); } 100% { transform: rotate(60deg) rotateX(360deg); } }
-        @keyframes spinAtomZ { 0% { transform: rotate(-60deg) rotateY(0deg); } 100% { transform: rotate(-60deg) rotateY(360deg); } }
-
-        /* Bright Audio Wave Bars (Music) */
-        .kinetic-bars {
+        /* Jumping Musical Beats */
+        .melody-bars {
             display: flex;
             gap: 4px;
             align-items: center;
             z-index: 5;
         }
-
-        .k-bar {
+        .m-bar {
             width: 4px;
-            background: linear-gradient(to top, #818cf8, #38bdf8);
+            background: #ffffff;
             border-radius: 2px;
-            animation: kineticPulse 1s ease-in-out infinite;
+            animation: pulseBar 1s ease-in-out infinite;
         }
-        .k-bar:nth-child(1) { height: 15px; animation-delay: 0.1s; }
-        .k-bar:nth-child(2) { height: 35px; animation-delay: 0.3s; }
-        .k-bar:nth-child(3) { height: 45px; animation-delay: 0.5s; }
-        .k-bar:nth-child(4) { height: 25px; animation-delay: 0.2s; }
-        .k-bar:nth-child(5) { height: 12px; animation-delay: 0.4s; }
+        .m-bar:nth-child(1) { height: 14px; animation-delay: 0.1s; }
+        .m-bar:nth-child(2) { height: 32px; animation-delay: 0.3s; }
+        .m-bar:nth-child(3) { height: 22px; animation-delay: 0.5s; }
 
-        @keyframes kineticPulse {
-            0%, 100% { transform: scaleY(0.4); }
-            50% { transform: scaleY(1.2); filter: drop-shadow(0 0 4px #38bdf8); }
-        }
+        @keyframes spinRing { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes pulseBar { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1.3); } }
 
-        /* Premium Typography */
         h1 {
-            font-size: 26px;
+            font-size: 25px;
             font-weight: 900;
-            margin-bottom: 6px;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #1e1b4b, #4338ca, #0369a1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #132a13;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
             text-transform: uppercase;
         }
 
         p.username {
-            font-size: 12px;
-            color: #64748b;
-            margin-bottom: 30px;
+            font-size: 13px;
+            color: #4f6d7a;
+            margin-bottom: 25px;
             font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Premium Proverb Banner */
-        .proverb-banner {
-            background: rgba(255, 255, 255, 0.8);
-            border-left: 4px solid #38bdf8;
-            padding: 15px 18px;
-            margin-bottom: 35px;
+        /* Deep Inspiring Cultural Proverb Box */
+        .cultural-proverb {
+            background: #fff9db; /* Warm Pastel Yellow */
+            border: 2.5px solid #132a13;
+            padding: 14px 16px;
+            margin-bottom: 30px;
             text-align: left;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.06);
-            border: 1px solid rgba(14, 165, 233, 0.1);
-            border-left: 4px solid #38bdf8;
+            border-radius: 14px;
+            box-shadow: 4px 4px 0px #132a13;
         }
 
-        .proverb-banner p {
+        .cultural-proverb p {
             font-style: italic;
             font-size: 13.5px;
-            line-height: 1.6;
-            color: #334155;
-            font-weight: 600;
+            line-height: 1.5;
+            color: #132a13;
+            font-weight: 700;
         }
 
-        /* Bright Interactive Info Grid */
-        .info-grid {
+        /* Color-Burst Multi-Color Information Stack (ভরে ভরে রঙের মেলা) */
+        .art-stack {
+            text-align: left;
+            margin-bottom: 35px;
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 40px;
-            text-align: left;
         }
 
-        .info-chip {
+        .art-chip {
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px 20px;
-            border-radius: 18px;
-            border: 1px solid rgba(14, 165, 233, 0.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 2.5px solid #132a13;
+            box-shadow: 4px 4px 0px #132a13;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .info-chip:hover {
-            transform: translateX(6px) scale(1.02);
-            background: #ffffff;
-            border-color: #818cf8;
-            box-shadow: 0 10px 20px rgba(129, 140, 248, 0.12);
+        /* Individual Bright & Beautiful Colors for Each Box (কোনো ল্যাব ফিল নেই, একদম খাঁটি আর্ট) */
+        .art-stack .art-chip:nth-child(1) { background-color: #a2d2ff; } /* Soft Ocean Blue */
+        .art-stack .art-chip:nth-child(2) { background-color: #ffafcc; } /* Cute Rose Pink */
+        .art-stack .art-chip:nth-child(3) { background-color: #ffcc00; } /* Sun-Kissed Yellow */
+        .art-stack .art-chip:nth-child(4) { background-color: #b7e4c7; } /* Mint Green */
+        .art-stack .art-chip:nth-child(5) { background-color: #cdb4db; } /* Sweet Lavender */
+
+        .art-chip:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 7px 7px 0px #132a13;
         }
 
-        .chip-icon-wrapper {
-            margin-right: 16px;
-            font-size: 15px;
-            width: 36px;
-            height: 36px;
-            border-radius: 12px;
+        .chip-icon {
+            margin-right: 15px;
+            font-size: 16px;
+            color: #132a13;
+            width: 26px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
         }
 
-        /* Color Icons Setup */
-        .info-chip:nth-child(1) .chip-icon-wrapper { color: #06b6d4; background: #ecfeff; border-color: #cffafe; }
-        .info-chip:nth-child(2) .chip-icon-wrapper { color: #db2777; background: #fdf2f8; border-color: #fce7f3; }
-        .info-chip:nth-child(3) .chip-icon-wrapper { color: #d97706; background: #fffbeb; border-color: #fef3c7; }
-        .info-chip:nth-child(4) .chip-icon-wrapper { color: #059669; background: #f0fdf4; border-color: #dcfce7; }
-        .info-chip:nth-child(5) .chip-icon-wrapper { color: #7c3aed; background: #f5f3ff; border-color: #ede9fe; }
-
-        .info-chip:hover .chip-icon-wrapper {
-            transform: rotate(15deg) scale(1.1);
-        }
-
-        .chip-text {
+        .chip-label {
             font-size: 14.5px;
-            font-weight: 700;
-            color: #334155;
+            font-weight: 800;
+            color: #132a13;
+            letter-spacing: 0.2px;
         }
 
-        /* Premium Bright Action Buttons */
-        .action-stack {
+        /* Bold High-Contrast Forest Green Action Buttons */
+        .links-grid {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
         }
 
-        .launch-btn {
+        .art-btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            color: #ffffff;
+            background: #132a13; /* Deep Forest Green */
+            color: #bfdb38; /* Bright Lime Contrast Text */
             text-decoration: none;
-            padding: 18px 26px;
-            border-radius: 20px;
-            font-weight: 700;
+            padding: 16px 24px;
+            border-radius: 18px;
+            font-weight: 800;
             font-size: 15px;
-            letter-spacing: 0.5px;
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3.5px solid #132a13;
+            box-shadow: 5px 5px 0px #ff6b6b; /* Pop Color Shadow */
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .launch-btn:nth-child(2) {
-            background: linear-gradient(90deg, #475569, #334155);
-            box-shadow: 0 8px 20px rgba(51, 65, 85, 0.2);
-        }
-
-        .btn-label-group {
+        .btn-label-set {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
-        .launch-btn i.arrow-glow {
-            font-size: 12px;
-            opacity: 0.7;
-            transition: transform 0.3s;
+        .art-btn i.arrow-click {
+            font-size: 13px;
+            transition: transform 0.2s;
         }
 
-        /* Hover Physics */
-        .launch-btn:hover {
-            transform: translateY(-4px) scale(1.01);
-            filter: brightness(1.05);
-            color: #ffffff;
+        /* Interactive Hover Action */
+        .art-btn:hover {
+            background: #ffffff;
+            color: #132a13;
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #132a13;
         }
-        .launch-btn:nth-child(1):hover { box-shadow: 0 12px 25px rgba(129, 140, 248, 0.4); }
-        .launch-btn:nth-child(2):hover { box-shadow: 0 12px 25px rgba(51, 65, 85, 0.4); }
 
-        .launch-btn:hover i.arrow-glow {
-            transform: translateX(6px) scale(1.2);
-            opacity: 1;
+        .art-btn:hover i.arrow-click {
+            transform: translateX(4px) scale(1.1);
         }
     </style>
 </head>
 <body>
 
-    <!-- Liquid Bright Aurora Background Layer -->
-    <div class="bright-aurora-bg">
-        <div class="bright-orb orb-1"></div>
-        <div class="bright-orb orb-2"></div>
-        <div class="bright-orb orb-3"></div>
-    </div>
+    <!-- Cultural Decorative Decorative Layer -->
+    <div class="cultural-bg-art"></div>
 
-    <!-- Main White Gold Dashboard Container -->
-    <div class="bright-container animate__animated animate__zoomIn">
+    <!-- Main High-Contrast Colorful Card Window -->
+    <div class="artistic-card animate__animated animate__jackInTheBox">
         
-        <!-- The Quantum Atomic & Audio Core Component -->
-        <div class="quantum-graphic">
-            <div class="atom-ring"></div>
-            <div class="atom-ring"></div>
-            <div class="atom-ring"></div>
-            <div class="kinetic-bars">
-                <div class="k-bar"></div>
-                <div class="k-bar"></div>
-                <div class="k-bar"></div>
-                <div class="k-bar"></div>
-                <div class="k-bar"></div>
+        <!-- The Fusion Art Core Logo Component -->
+        <div class="fusion-core">
+            <div class="orbit-ring"></div>
+            <div class="melody-bars">
+                <div class="m-bar"></div>
+                <div class="m-bar"></div>
+                <div class="m-bar"></div>
             </div>
         </div>
         
@@ -335,49 +271,49 @@
         <p class="username">@sarkar_turzo</p>
 
         <!-- Deep Cultural Quote Proverb -->
-        <div class="proverb-banner animate__animated animate__fadeIn animate__delay-1s">
+        <div class="cultural-proverb">
             <p>"Science dissects the universe; Art weaves it together."</p>
         </div>
         
-        <!-- Interactive Information Chip Stack -->
-        <div class="info-grid animate__animated animate__fadeInUp animate__delay-1s">
-            <div class="info-chip">
-                <div class="chip-icon-wrapper"><i class="fa-solid fa-atom"></i></div>
-                <div class="chip-text">Science Student</div>
+        <!-- Beautiful Multi-Color Information Grid (ভরে ভরে রঙের মেলা) -->
+        <div class="art-stack">
+            <div class="art-chip">
+                <div class="chip-icon"><i class="fa-solid fa-atom"></i></div>
+                <div class="chip-label">Science Student</div>
             </div>
-            <div class="info-chip">
-                <div class="chip-icon-wrapper"><i class="fa-solid fa-microphone-lines"></i></div>
-                <div class="chip-text">Child Journalist</div>
+            <div class="art-chip">
+                <div class="chip-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                <div class="chip-text chip-label">Child Journalist</div>
             </div>
-            <div class="info-chip">
-                <div class="chip-icon-wrapper"><i class="fa-solid fa-music"></i></div>
-                <div class="chip-text">Tabla & Ukulele Player</div>
+            <div class="art-chip">
+                <div class="chip-icon"><i class="fa-solid fa-guitar"></i></div>
+                <div class="chip-label">Tabla & Ukulele Player</div>
             </div>
-            <div class="info-chip">
-                <div class="chip-icon-wrapper"><i class="fa-solid fa-school"></i></div>
-                <div class="chip-text">Bagerhat Govt High School (Class 9)</div>
+            <div class="art-chip">
+                <div class="chip-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="chip-label">Bagerhat Govt High School (Class 9)</div>
             </div>
-            <div class="info-chip">
-                <div class="chip-icon-wrapper"><i class="fa-solid fa-calendar-check"></i></div>
-                <div class="chip-text">August 08</div>
+            <div class="art-chip">
+                <div class="chip-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="chip-label">August 08</div>
             </div>
         </div>
 
-        <!-- Action Navigation Stack -->
-        <div class="action-stack">
-            <a href="https://hello.bdnews24.com" class="launch-btn" target="_blank">
-                <span class="btn-label-group">
-                    <i class="fa-solid fa-newspaper"></i>
-                    Read My Stories on bdnews24
+        <!-- Heavy Duty High-Contrast Navigation Stack -->
+        <div class="links-grid">
+            <a href="https://hello.bdnews24.com" class="art-btn" target="_blank">
+                <span class="btn-label-set">
+                    <i class="fa-solid fa-book-open"></i>
+                    My Stories on bdnews24
                 </span>
-                <i class="fa-solid fa-circle-arrow-right arrow-glow"></i>
+                <i class="fa-solid fa-chevron-right arrow-click"></i>
             </a>
-            <a href="https://instagram.com/sarkar_turzo" class="launch-btn" target="_blank">
-                <span class="btn-label-group">
+            <a href="https://instagram.com/sarkar_turzo" class="art-btn" target="_blank">
+                <span class="btn-label-set">
                     <i class="fa-brands fa-instagram"></i>
-                    Connect on Instagram
+                    Instagram Profile
                 </span>
-                <i class="fa-solid fa-circle-arrow-right arrow-glow"></i>
+                <i class="fa-solid fa-chevron-right arrow-click"></i>
             </a>
         </div>
     </div>
