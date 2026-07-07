@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FT2M8RNWPX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT2M8RNWPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-FT2M8RNWPX');
-</script>
-    
+      gtag('config', 'G-FT2M8RNWPX');
+    </script>
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarkar Dipjoy | Artistic Cultural Space</title>
     <!-- Beautiful Icons and Typography -->
@@ -233,6 +233,9 @@
             border: 3.5px solid #132a13;
             box-shadow: 5px 5px 0px #ff6b6b; /* Pop Color Shadow */
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+            cursor: pointer;
+            text-align: left;
         }
 
         .btn-label-set {
@@ -311,13 +314,15 @@
 
         <!-- Heavy Duty High-Contrast Navigation Stack -->
         <div class="links-grid">
-            <a href="https://hello.bdnews24.com" class="art-btn" target="_blank">
+            <!-- এক ক্লিকে দুই নিউজ ওপেন করার জন্য কাস্টম বাটন -->
+            <button onclick="openMyStories()" class="art-btn">
                 <span class="btn-label-set">
                     <i class="fa-solid fa-book-open"></i>
                     My Stories on bdnews24
                 </span>
                 <i class="fa-solid fa-chevron-right arrow-click"></i>
-            </a>
+            </button>
+            
             <a href="https://instagram.com/sarkar_turzo" class="art-btn" target="_blank">
                 <span class="btn-label-set">
                     <i class="fa-brands fa-instagram"></i>
@@ -327,6 +332,14 @@
             </a>
         </div>
     </div>
+
+    <!-- জাভাস্ক্রিপ্ট ফাংশন যা এক ক্লিকে দুটি নিউজ একসাথে ওপেন করবে -->
+    <script>
+        function openMyStories() {
+            window.open("https://hello.bdnews24.com/hello-video/c34c93431d78", "_blank");
+            window.open("https://hello.bdnews24.com/hello-video/143bd4dd7ea9", "_blank");
+        }
+    </script>
 
 </body>
 </html>
