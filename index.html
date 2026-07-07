@@ -1,320 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT2M8RNWPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FT2M8RNWPX');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkar Dipjoy | Artistic Cultural Space</title>
-    <!-- Beautiful Icons and Typography -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sarkar Bio | Connect With Me</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-            /* Exact ScreenShot Inspired Vibrant Lime Background (স্ক্রিনশটের সেই উজ্জ্বল ও প্রাণবন্ত ব্যাকগ্রাউন্ড) */
-            background-color: #bfdb38; 
-            color: #132a13;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 24px;
-            overflow-x: hidden;
-            position: relative;
+            padding: 20px;
         }
 
-        /* Subtle Cultural Floating Sparkles in Background */
-        .cultural-bg-art {
-            position: absolute;
+        .container {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
             width: 100%;
-            height: 100%;
-            top: 0; left: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .cultural-bg-art::before, .cultural-bg-art::after {
-            content: "🎵 ✨ 🌸 🍃 ✨ 🎶";
-            position: absolute;
-            font-size: 26px;
-            opacity: 0.25;
-            animation: floatArt 8s linear infinite;
-        }
-        .cultural-bg-art::before { left: 8%; top: 15%; animation-delay: 0s; }
-        .cultural-bg-art::after { right: 8%; bottom: 15%; animation-delay: 3s; }
-
-        @keyframes floatArt {
-            0% { transform: translateY(0) scale(1) rotate(0deg); }
-            50% { transform: translateY(-30px) scale(1.1) rotate(180deg); }
-            100% { transform: translateY(0) scale(1) rotate(360deg); }
-        }
-
-        /* Beautiful Hand-Crafted Premium Card */
-        .artistic-card {
-            background: #ffffff;
-            padding: 45px 28px;
-            border-radius: 32px;
-            /* Solid Bold High-Contrast Shadow from the Screenshot Style */
-            box-shadow: 10px 10px 0px #132a13;
-            border: 3.5px solid #132a13;
+            max-width: 450px;
             text-align: center;
-            max-width: 385px;
-            width: 100%;
-            z-index: 10;
-            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* The Ultimate Science & Melody Fusion Core Logo */
-        .fusion-core {
+        .profile-img {
             width: 110px;
             height: 110px;
-            background: #ff6b6b; /* Vibrant Coral Red */
             border-radius: 50%;
-            margin: 0 auto 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid #132a13;
-            box-shadow: 5px 5px 0px #132a13;
-            position: relative;
-            animation: gentleBounce 4s ease-in-out infinite;
+            object-fit: cover;
+            border: 3px solid #38bdf8;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
         }
-
-        @keyframes gentleBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-
-        /* Orbital Science Ring */
-        .orbit-ring {
-            position: absolute;
-            width: 90px;
-            height: 32px;
-            border: 2.5px solid #ffffff;
-            border-radius: 50%;
-            animation: spinRing 4s linear infinite;
-        }
-
-        /* Jumping Musical Beats */
-        .melody-bars {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-            z-index: 5;
-        }
-        .m-bar {
-            width: 4px;
-            background: #ffffff;
-            border-radius: 2px;
-            animation: pulseBar 1s ease-in-out infinite;
-        }
-        .m-bar:nth-child(1) { height: 14px; animation-delay: 0.1s; }
-        .m-bar:nth-child(2) { height: 32px; animation-delay: 0.3s; }
-        .m-bar:nth-child(3) { height: 22px; animation-delay: 0.5s; }
-
-        @keyframes spinRing { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        @keyframes pulseBar { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1.3); } }
 
         h1 {
-            font-size: 25px;
-            font-weight: 900;
-            color: #132a13;
-            letter-spacing: 1.5px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        p.username {
-            font-size: 13px;
-            color: #4f6d7a;
-            margin-bottom: 25px;
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: #f1f5f9;
         }
 
-        /* Deep Inspiring Cultural Proverb Box */
-        .cultural-proverb {
-            background: #fff9db; /* Warm Pastel Yellow */
-            border: 2.5px solid #132a13;
-            padding: 14px 16px;
+        .subtitle {
+            font-size: 0.95rem;
+            color: #94a3b8;
             margin-bottom: 30px;
-            text-align: left;
-            border-radius: 14px;
-            box-shadow: 4px 4px 0px #132a13;
         }
 
-        .cultural-proverb p {
-            font-style: italic;
-            font-size: 13.5px;
-            line-height: 1.5;
-            color: #132a13;
-            font-weight: 700;
-        }
-
-        /* Color-Burst Multi-Color Information Stack (ভরে ভরে রঙের মেলা) */
-        .art-stack {
-            text-align: left;
-            margin-bottom: 35px;
+        .links-container {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
         }
 
-        .art-chip {
-            display: flex;
-            align-items: center;
-            padding: 14px 18px;
-            border-radius: 16px;
-            border: 2.5px solid #132a13;
-            box-shadow: 4px 4px 0px #132a13;
-            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* Individual Bright & Beautiful Colors for Each Box (কোনো ল্যাব ফিল নেই, একদম খাঁটি আর্ট) */
-        .art-stack .art-chip:nth-child(1) { background-color: #a2d2ff; } /* Soft Ocean Blue */
-        .art-stack .art-chip:nth-child(2) { background-color: #ffafcc; } /* Cute Rose Pink */
-        .art-stack .art-chip:nth-child(3) { background-color: #ffcc00; } /* Sun-Kissed Yellow */
-        .art-stack .art-chip:nth-child(4) { background-color: #b7e4c7; } /* Mint Green */
-        .art-stack .art-chip:nth-child(5) { background-color: #cdb4db; } /* Sweet Lavender */
-
-        .art-chip:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 7px 7px 0px #132a13;
-        }
-
-        .chip-icon {
-            margin-right: 15px;
-            font-size: 16px;
-            color: #132a13;
-            width: 26px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .chip-label {
-            font-size: 14.5px;
-            font-weight: 800;
-            color: #132a13;
-            letter-spacing: 0.2px;
-        }
-
-        /* Bold High-Contrast Forest Green Action Buttons */
-        .links-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .art-btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #132a13; /* Deep Forest Green */
-            color: #bfdb38; /* Bright Lime Contrast Text */
+        .link-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f1f5f9;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
             text-decoration: none;
-            padding: 16px 24px;
-            border-radius: 18px;
-            font-weight: 800;
-            font-size: 15px;
-            border: 3.5px solid #132a13;
-            box-shadow: 5px 5px 0px #ff6b6b; /* Pop Color Shadow */
-            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
+            display: block;
         }
 
-        .btn-label-set {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .link-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
         }
 
-        .art-btn i.arrow-click {
-            font-size: 13px;
-            transition: transform 0.2s;
-        }
-
-        /* Interactive Hover Action */
-        .art-btn:hover {
-            background: #ffffff;
-            color: #132a13;
-            transform: translate(-2px, -2px);
-            box-shadow: 7px 7px 0px #132a13;
-        }
-
-        .art-btn:hover i.arrow-click {
-            transform: translateX(4px) scale(1.1);
+        .footer {
+            margin-top: 35px;
+            font-size: 0.8rem;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cultural Decorative Decorative Layer -->
-    <div class="cultural-bg-art"></div>
+    <div class="container">
+        <!-- তোমার প্রোফাইল ছবি (প্রয়োজনে লিংক পরিবর্তন করতে পারো) -->
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        
+        <h1>Sarkar Dipjoy</h1>
+        <p class="subtitle">Welcome to my personal space</p>
 
-    <!-- Main High-Contrast Colorful Card Window -->
-    <div class="artistic-card animate__animated animate__jackInTheBox">
-        
-        <!-- The Fusion Art Core Logo Component -->
-        <div class="fusion-core">
-            <div class="orbit-ring"></div>
-            <div class="melody-bars">
-                <div class="m-bar"></div>
-                <div class="m-bar"></div>
-                <div class="m-bar"></div>
-            </div>
-        </div>
-        
-        <h1>SARKAR DIPJOY</h1>
-        <p class="username">@sarkar_turzo</p>
-
-        <!-- Deep Cultural Quote Proverb -->
-        <div class="cultural-proverb">
-            <p>"Science dissects the universe; Art weaves it together."</p>
-        </div>
-        
-        <!-- Beautiful Multi-Color Information Grid (ভরে ভরে রঙের মেলা) -->
-        <div class="art-stack">
-            <div class="art-chip">
-                <div class="chip-icon"><i class="fa-solid fa-atom"></i></div>
-                <div class="chip-label">Science Student</div>
-            </div>
-            <div class="art-chip">
-                <div class="chip-icon"><i class="fa-solid fa-feather-pointed"></i></div>
-                <div class="chip-text chip-label">Child Journalist</div>
-            </div>
-            <div class="art-chip">
-                <div class="chip-icon"><i class="fa-solid fa-guitar"></i></div>
-                <div class="chip-label">Tabla & Ukulele Player</div>
-            </div>
-            <div class="art-chip">
-                <div class="chip-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <div class="chip-label">Bagerhat Govt High School (Class 9)</div>
-            </div>
-            <div class="art-chip">
-                <div class="chip-icon"><i class="fa-solid fa-cake-candles"></i></div>
-                <div class="chip-label">August 08</div>
-            </div>
+        <div class="links-container">
+            <!-- এখানে তোমার সোশ্যাল মিডিয়ার লিংকগুলো বসাবে -->
+            <a href="https://github.com/sarkardipjoy50-source" target="_blank" class="link-btn">GitHub Profile</a>
+            <a href="#" target="_blank" class="link-btn">Facebook</a>
+            <a href="#" target="_blank" class="link-btn">Instagram</a>
+            <a href="#" class="link-btn">Contact Me</a>
         </div>
 
-        <!-- Heavy Duty High-Contrast Navigation Stack -->
-        <div class="links-grid">
-            <a href="https://hello.bdnews24.com" class="art-btn" target="_blank">
-                <span class="btn-label-set">
-                    <i class="fa-solid fa-book-open"></i>
-                    My Stories on bdnews24
-                </span>
-                <i class="fa-solid fa-chevron-right arrow-click"></i>
-            </a>
-            <a href="https://instagram.com/sarkar_turzo" class="art-btn" target="_blank">
-                <span class="btn-label-set">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram Profile
-                </span>
-                <i class="fa-solid fa-chevron-right arrow-click"></i>
-            </a>
+        <div class="footer">
+            <p>© 2026 | Created with ❤️</p>
         </div>
     </div>
 
