@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkar Dipjoy | Official Bio</title>
-    <!-- Premium Icons and Typo Fonts -->
+    <title>Sarkar Dipjoy | Ultimate Creative Space</title>
+    <!-- Modern Dynamic CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Reset and Base Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,234 +16,372 @@
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-            /* Flat, Premium Matte Earth Tone (স্ক্রিনশটের মতো সলিড ও মার্জিত ব্যাকগ্রাউন্ড) */
-            background-color: #f3efe6;
-            color: #2b3a32;
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+            background: #030712;
+            color: #f8fafc;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 25px;
-        }
-
-        /* Neo-Brutalism High Contrast Card Design */
-        .brutal-card {
-            background: #ffffff;
-            padding: 45px 30px;
-            border-radius: 24px;
-            /* Solid Heavy Shadow like modern top-tier portfolios */
-            box-shadow: 8px 8px 0px #2b3a32;
-            border: 3px solid #2b3a32;
-            text-align: center;
-            max-width: 380px;
-            width: 100%;
+            overflow-x: hidden;
             position: relative;
         }
 
-        /* Minimal Graphic Circle (No Face - High Contrast Art) */
-        .art-hub {
-            width: 105px;
-            height: 105px;
-            background: #2b3a32;
+        /* 1. Mega Nebula Kinetic Color Background (ব্যাকগ্রাউন্ডে রঙের মেলা) */
+        .nebula-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: #050515;
+        }
+
+        .blur-orb {
+            position: absolute;
             border-radius: 50%;
-            margin: 0 auto 25px;
+            filter: blur(120px);
+            opacity: 0.55;
+            animation: orbMove 12s infinite alternate ease-in-out;
+        }
+
+        .orb-1 { width: 400px; height: 400px; background: #6366f1; top: -10%; left: -10%; }
+        .orb-2 { width: 500px; height: 500px; background: #a855f7; bottom: -20%; right: -10%; animation-delay: 3s; }
+        .orb-3 { width: 350px; height: 350px; background: #0ea5e9; top: 40%; left: 50%; animation-delay: 6s; }
+        .orb-4 { width: 300px; height: 300px; background: #10b981; bottom: 30%; left: -10%; animation-delay: 9s; }
+
+        @keyframes orbMove {
+            0% { transform: scale(1) translate(0, 0) rotate(0deg); }
+            50% { transform: scale(1.3) translate(50px, -40px) rotate(180deg); }
+            100% { transform: scale(0.9) translate(-30px, 60px) rotate(360deg); }
+        }
+
+        /* 2. Advanced Neon-Glow Glassmorphism Dashboard */
+        .mega-container {
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            padding: 50px 35px;
+            border-radius: 36px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 
+                        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            /* Multi-color glowing outline border */
+            border: 2px solid transparent;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)), 
+                              linear-gradient(135deg, #6366f1, #a855f7, #0ea5e9, #10b981);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            animation: borderGlow 8s infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: drop-shadow(0 0 5px rgba(99, 102, 241, 0.3)); }
+            100% { filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.5)); }
+        }
+
+        /* 3. The Ultimate Quantum-Audio Master Core Graphic */
+        .quantum-graphic {
+            width: 125px;
+            height: 125px;
+            background: linear-gradient(135deg, #0b0f19, #1e293b);
+            border-radius: 50%;
+            margin: 0 auto 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid #2b3a32;
-            box-shadow: 4px 4px 0px #d4e5d4;
-            color: #f3efe6;
-            font-size: 32px;
             position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .art-hub i {
+        /* 3D Atomic Orbit Rings (Science Effect) */
+        .atom-ring {
             position: absolute;
+            width: 100px;
+            height: 38px;
+            border: 1.5px solid rgba(14, 165, 233, 0.6);
+            border-radius: 50%;
+            animation: spinAtomX 4s linear infinite;
+            transform-style: preserve-3d;
         }
-        .art-hub i.fa-flask { transform: translate(-12px, -10px) scale(0.8); color: #a3b899; }
-        .art-hub i.fa-music { transform: translate(12px, 10px) scale(0.9); color: #f3efe6; }
+        .atom-ring:nth-child(2) {
+            transform: rotate(60deg);
+            border-color: rgba(168, 85, 247, 0.6);
+            animation: spinAtomY 5s linear infinite reverse;
+        }
+        .atom-ring:nth-child(3) {
+            transform: rotate(-60deg);
+            border-color: rgba(16, 119, 129, 0.6);
+            animation: spinAtomZ 6s linear infinite;
+        }
 
+        @keyframes spinAtomX { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spinAtomY { 0% { transform: rotate(60deg) rotateX(0deg); } 100% { transform: rotate(60deg) rotateX(360deg); } }
+        @keyframes spinAtomZ { 0% { transform: rotate(-60deg) rotateY(0deg); } 100% { transform: rotate(-60deg) rotateY(360deg); } }
+
+        /* Glowing Kinetic Audio Wave Bars (Music Effect) */
+        .kinetic-bars {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            z-index: 5;
+        }
+
+        .k-bar {
+            width: 4px;
+            background: linear-gradient(to top, #6366f1, #0ea5e9, #ffffff);
+            border-radius: 2px;
+            animation: kineticPulse 1s ease-in-out infinite;
+        }
+        .k-bar:nth-child(1) { height: 15px; animation-delay: 0.1s; }
+        .k-bar:nth-child(2) { height: 35px; animation-delay: 0.3s; }
+        .k-bar:nth-child(3) { height: 45px; animation-delay: 0.5s; }
+        .k-bar:nth-child(4) { height: 25px; animation-delay: 0.2s; }
+        .k-bar:nth-child(5) { height: 12px; animation-delay: 0.4s; }
+
+        @keyframes kineticPulse {
+            0%, 100% { transform: scaleY(0.4); filter: brightness(1); }
+            50% { transform: scaleY(1.2); filter: brightness(1.3); drop-shadow(0 0 8px #0ea5e9); }
+        }
+
+        /* Typography & Headings */
         h1 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 900;
-            color: #2b3a32;
-            letter-spacing: 1px;
+            margin-bottom: 6px;
+            letter-spacing: 2.5px;
+            background: linear-gradient(to right, #ffffff, #a5b4fc, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            margin-bottom: 4px;
         }
 
         p.username {
-            font-size: 13px;
-            color: #6e7e75;
-            margin-bottom: 25px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* Deep Inspiring Cultural Proverb Quote Box */
-        .proverb-box {
-            background: #fcfbfa;
-            border-left: 4px solid #2b3a32;
-            padding: 14px 16px;
+            font-size: 12px;
+            color: #94a3b8;
             margin-bottom: 30px;
-            text-align: left;
-            border-radius: 4px;
-            box-shadow: 2px 2px 0px rgba(43, 58, 50, 0.1);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .proverb-box p {
+        /* 4. Cyber Premium Proverb Banner */
+        .proverb-banner {
+            background: rgba(3, 7, 18, 0.6);
+            border-left: 3px solid #0ea5e9;
+            padding: 15px 18px;
+            margin-bottom: 35px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-right: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .proverb-banner p {
             font-style: italic;
             font-size: 13px;
-            line-height: 1.5;
-            color: #44544a;
+            line-height: 1.6;
+            color: #cbd5e1;
             font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
-        /* Structured Flat Bio Grid */
-        .info-stack {
-            text-align: left;
-            margin-bottom: 35px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .info-tag {
-            display: flex;
-            align-items: center;
-            background: #f8f7f4;
-            padding: 14px 18px;
-            border-radius: 12px;
-            border: 2px solid #2b3a32;
-            box-shadow: 3px 3px 0px #2b3a32;
-            transition: all 0.2s;
-        }
-
-        .info-tag:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 5px 5px 0px #2b3a32;
-        }
-
-        .tag-icon {
-            margin-right: 15px;
-            font-size: 15px;
-            color: #2b3a32;
-            width: 24px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .tag-text {
-            font-size: 14px;
-            font-weight: 700;
-            color: #2b3a32;
-        }
-
-        /* High Contrast Bold Action Buttons */
-        .links-stack {
+        /* 5. Hyper-Drive Animated Info Stack */
+        .info-grid {
             display: flex;
             flex-direction: column;
             gap: 14px;
+            margin-bottom: 40px;
+            text-align: left;
         }
 
-        .brutal-btn {
+        .info-chip {
+            display: flex;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 15px 20px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .info-chip:hover {
+            transform: translateX(6px) scale(1.02);
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.15);
+        }
+
+        .chip-icon-wrapper {
+            margin-right: 16px;
+            font-size: 15px;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s;
+        }
+
+        /* Interactive Colors for Individual Icons */
+        .info-chip:nth-child(1) .chip-icon-wrapper { color: #67e8f9; background: rgba(6, 182, 212, 0.1); }
+        .info-chip:nth-child(2) .chip-icon-wrapper { color: #f472b6; background: rgba(236, 72, 153, 0.1); }
+        .info-chip:nth-child(3) .chip-icon-wrapper { color: #fbbf24; background: rgba(245, 158, 11, 0.1); }
+        .info-chip:nth-child(4) .chip-icon-wrapper { color: #34d399; background: rgba(16, 185, 129, 0.1); }
+        .info-chip:nth-child(5) .chip-icon-wrapper { color: #a78bfa; background: rgba(139, 92, 246, 0.1); }
+
+        .info-chip:hover .chip-icon-wrapper {
+            transform: rotate(15deg) scale(1.1);
+            filter: drop-shadow(0 0 5px currentColor);
+        }
+
+        .chip-text {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #e2e8f0;
+            letter-spacing: 0.3px;
+        }
+
+        /* 6. High-Performance Action Navigation Links */
+        .action-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .launch-btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #2b3a32;
-            color: #f3efe6;
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            color: #ffffff;
             text-decoration: none;
-            padding: 16px 24px;
-            border-radius: 14px;
+            padding: 18px 26px;
+            border-radius: 20px;
             font-weight: 700;
-            font-size: 14.5px;
-            border: 3px solid #2b3a32;
-            box-shadow: 4px 4px 0px #92a488;
-            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .btn-label {
+        .launch-btn:nth-child(2) {
+            background: linear-gradient(90deg, #0ea5e9, #10b981);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-label-group {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
 
-        .brutal-btn i.arrow-icon {
+        .launch-btn i.arrow-glow {
             font-size: 12px;
-            transition: transform 0.2s;
+            opacity: 0.6;
+            transition: transform 0.3s;
         }
 
-        /* Modern Hover Pressing Effect (বাটন নিচে ডেবে যাওয়ার প্রিমিয়াম মেকানিজম) */
-        .brutal-btn:hover {
-            background: #f3efe6;
-            color: #2b3a32;
-            transform: translate(2px, 2px);
-            box-shadow: 0px 0px 0px #2b3a32;
+        /* Hover Physics Effect */
+        .launch-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            filter: brightness(1.1);
+            color: #ffffff;
         }
+        .launch-btn:nth-child(1):hover { box-shadow: 0 15px 30px rgba(168, 85, 247, 0.5); }
+        .launch-btn:nth-child(2):hover { box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5); }
 
-        .brutal-btn:hover i.arrow-icon {
-            transform: translateX(3px);
+        .launch-btn:hover i.arrow-glow {
+            transform: translateX(6px) scale(1.2);
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
-    <div class="brutal-card">
+    <!-- Kinetic Color Nebula Background Layer -->
+    <div class="nebula-bg">
+        <div class="blur-orb orb-1"></div>
+        <div class="blur-orb orb-2"></div>
+        <div class="blur-orb orb-3"></div>
+        <div class="blur-orb orb-4"></div>
+    </div>
+
+    <!-- Main Dashboard Window Container -->
+    <div class="mega-container animate__animated animate__zoomIn">
         
-        <!-- Minimalist High-Contrast Graphic Fusion -->
-        <div class="art-hub">
-            <i class="fa-solid fa-flask"></i>
-            <i class="fa-solid fa-music"></i>
+        <!-- The Quantum Atomic & Audio Core Component -->
+        <div class="quantum-graphic">
+            <div class="atom-ring"></div>
+            <div class="atom-ring"></div>
+            <div class="atom-ring"></div>
+            <div class="kinetic-bars">
+                <div class="k-bar"></div>
+                <div class="k-bar"></div>
+                <div class="k-bar"></div>
+                <div class="k-bar"></div>
+                <div class="k-bar"></div>
+            </div>
         </div>
         
         <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
 
-        <!-- Deep Cultural Proverb Quote -->
-        <div class="proverb-box">
+        <!-- Deep Cultural Quote Proverb -->
+        <div class="proverb-banner animate__animated animate__fadeIn animate__delay-1s">
             <p>"Science dissects the universe; Art weaves it together."</p>
         </div>
         
-        <!-- Clean High-Contrast Info Grid -->
-        <div class="info-stack">
-            <div class="info-tag">
-                <div class="tag-icon"><i class="fa-solid fa-atom"></i></div>
-                <div class="tag-text">Science Student</div>
+        <!-- Interactive Information Chip Stack -->
+        <div class="info-grid animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="info-chip">
+                <div class="chip-icon-wrapper"><i class="fa-solid fa-atom"></i></div>
+                <div class="chip-text">Science Student</div>
             </div>
-            <div class="info-tag">
-                <div class="tag-icon"><i class="fa-solid fa-pen-fancy"></i></div>
-                <div class="tag-text">Child Journalist</div>
+            <div class="info-chip">
+                <div class="chip-icon-wrapper"><i class="fa-solid fa-microphone-lines"></i></div>
+                <div class="chip-text">Child Journalist</div>
             </div>
-            <div class="info-tag">
-                <div class="tag-icon"><i class="fa-solid fa-guitar"></i></div>
-                <div class="tag-text">Tabla & Ukulele Player</div>
+            <div class="info-chip">
+                <div class="chip-icon-wrapper"><i class="fa-solid fa-music"></i></div>
+                <div class="chip-text">Tabla & Ukulele Player</div>
             </div>
-            <div class="info-tag">
-                <div class="tag-icon"><i class="fa-solid fa-building-columns"></i></div>
-                <div class="tag-text">Bagerhat Govt High School (Class 9)</div>
+            <div class="info-chip">
+                <div class="chip-icon-wrapper"><i class="fa-solid fa-school"></i></div>
+                <div class="chip-text">Bagerhat Govt High School (Class 9)</div> <!-- Class 9 -->
             </div>
-            <div class="info-tag">
-                <div class="tag-icon"><i class="fa-solid fa-cake-candles"></i></div>
-                <div class="tag-text">August 08</div>
+            <div class="info-chip">
+                <div class="chip-icon-wrapper"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="chip-text">August 08</div>
             </div>
         </div>
 
-        <!-- Heavy Duty Flat Navigation Links -->
-        <div class="links-stack">
-            <a href="https://hello.bdnews24.com" class="brutal-btn" target="_blank">
-                <span class="btn-label">
+        <!-- High-Performance Action Navigation Stack -->
+        <div class="action-stack">
+            <a href="https://hello.bdnews24.com" class="launch-btn" target="_blank">
+                <span class="btn-label-group">
                     <i class="fa-solid fa-newspaper"></i>
-                    My Reports on bdnews24
+                    Read My Reports on bdnews24
                 </span>
-                <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                <i class="fa-solid fa-circle-arrow-right arrow-glow"></i>
             </a>
-            <a href="https://instagram.com/sarkar_turzo" class="brutal-btn" target="_blank">
-                <span class="btn-label">
+            <a href="https://instagram.com/sarkar_turzo" class="launch-btn" target="_blank">
+                <span class="btn-label-group">
                     <i class="fa-brands fa-instagram"></i>
-                    Instagram Profile
+                    Connect on Instagram
                 </span>
-                <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                <i class="fa-solid fa-circle-arrow-right arrow-glow"></i>
             </a>
         </div>
     </div>
