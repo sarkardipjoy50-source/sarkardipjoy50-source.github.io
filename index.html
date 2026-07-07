@@ -3,85 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkar Dipjoy | Portfolio</title>
+    <title>Sarkar Dipjoy | Science & Arts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Georgia', serif;
-            background: #f4ebd0;
-            color: #4a3728;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            /* Ultra-premium Soft Mist with a subtle tint */
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0, #cbd5e1);
+            color: #334155;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
         }
+
         .container {
-            background: #fcf8f2;
-            padding: 40px 30px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(74, 55, 40, 0.15);
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            padding: 45px 30px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06), 
+                        inset 0 1px 1px rgba(255, 255, 255, 0.8);
             text-align: center;
-            max-width: 360px;
+            max-width: 370px;
             width: 100%;
-            border: 2px solid #d5c3aa;
-            outline: 1px solid #4a3728;
-            outline-offset: -10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        .profile-icon {
-            font-size: 45px;
-            width: 90px;
-            height: 90px;
-            background: #f4ebd0;
-            border: 2px solid #4a3728;
+
+        /* Science & Music Hybrid Circle (No Face Art) */
+        .science-circle {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
             border-radius: 50%;
+            margin: 0 auto 25px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 10px auto 25px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+            position: relative;
         }
-        h1 { font-size: 24px; font-weight: 700; color: #2b1f16; letter-spacing: 1px; font-family: 'Georgia', serif; }
-        p.username { font-size: 13px; color: #7a624e; margin-bottom: 25px; font-style: italic; }
+
+        /* Orbiting Atom Ring Effect */
+        .science-circle::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            border: 2px solid rgba(14, 165, 233, 0.4);
+            border-radius: 50%;
+            animation: orbit 4s linear infinite;
+        }
+
+        .science-circle::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            border: 2px solid rgba(168, 85, 247, 0.4);
+            border-radius: 50%;
+            animation: orbit 4s linear infinite reverse;
+            transform: rotate(60deg);
+        }
+
+        /* Core Audio Wave in center */
+        .core-wave {
+            display: flex;
+            gap: 3px;
+            z-index: 5;
+        }
+
+        .wave-bar {
+            width: 3px;
+            height: 15px;
+            background: #f8fafc;
+            border-radius: 1px;
+            animation: pulseWave 1s ease-in-out infinite;
+        }
+        .wave-bar:nth-child(1) { animation-delay: 0.2s; height: 22px; }
+        .wave-bar:nth-child(2) { animation-delay: 0.4s; height: 32px; }
+        .wave-bar:nth-child(3) { animation-delay: 0.6s; height: 18px; }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseWave {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1.2); }
+        }
+
+        h1 {
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: 1.5px;
+            color: #0f172a;
+        }
+
+        p.username {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Styled Premium Bio Box */
         .bio-section {
             text-align: left;
-            border-top: 1px dashed #d5c3aa;
-            border-bottom: 1px dashed #d5c3aa;
-            padding: 20px 5px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 22px;
+            border-radius: 20px;
             margin-bottom: 30px;
             font-size: 14px;
             line-height: 1.9;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        .bio-item { display: flex; align-items: center; margin-bottom: 12px; }
+
+        .bio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #475569;
+        }
+
         .bio-item:last-child { margin-bottom: 0; }
-        .icon-p { margin-right: 15px; font-size: 15px; color: #7a624e; }
-        .links-container { display: flex; flex-direction: column; gap: 12px; }
-        .btn {
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            background: #4a3728; color: #fcf8f2; text-decoration: none; padding: 14px;
-            border-radius: 2px; font-weight: 600; font-size: 14px; transition: all 0.3s;
-            border: 1px solid #4a3728;
+
+        .icon-p {
+            margin-right: 14px;
+            font-size: 14px;
+            background: rgba(15, 23, 42, 0.05);
+            color: #1e293b;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .btn:hover { background: #fcf8f2; color: #4a3728; }
+
+        /* Clean Minimalist Action Buttons */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #1e293b;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid #1e293b;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+        }
     </style>
 </head>
 <body>
-    <div class="container animate__animated animate__fadeIn">
-        <div class="profile-icon">🪘</div>
+
+    <div class="container animate__animated animate__fadeInUp">
+        
+        <!-- Science + Music Combined Hybrid Custom Art Box -->
+        <div class="science-circle">
+            <div class="core-wave">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+            </div>
+        </div>
+        
         <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
+        
         <div class="bio-section">
-            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-newspaper"></i></span><span>Child Journalist</span></div>
-            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-music"></i></span><span>Tabla & Ukulele Player</span></div>
-            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-utensils"></i></span><span>Kitchen Experimenter</span></div>
-            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-graduation-cap"></i></span><span>Bagerhat Govt High School (Class 9)</span></div>
-            <div class="bio-item"><span class="icon-p"><i class="fa-solid fa-cake-candles"></i></span><span>August 08</span></div>
+            <div class="bio-item">
+                <span class="icon-p"><i class="fa-solid fa-flask"></i></span>
+                <span>Science Student</span> <!-- Science Background Highlighted -->
+            </div>
+            <div class="bio-item">
+                <span class="icon-p"><i class="fa-solid fa-newspaper"></i></span>
+                <span>Child Journalist</span>
+            </div>
+            <div class="bio-item">
+                <span class="icon-p"><i class="fa-solid fa-music"></i></span>
+                <span>Tabla & Ukulele Player</span>
+            </div>
+            <div class="bio-item">
+                <span class="icon-p"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span>Bagerhat Govt High School (Class 9)</span>
+            </div>
+            <div class="bio-item">
+                <span class="icon-p"><i class="fa-solid fa-cake-candles"></i></span>
+                <span>August 08</span>
+            </div>
         </div>
+
         <div class="links-container">
-            <a href="https://hello.bdnews24.com" class="btn" target="_blank">My Reports on bdnews24</a>
-            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank">Instagram Profile</a>
+            <a href="https://hello.bdnews24.com" class="btn" target="_blank">
+                <i class="fa-solid fa-feather-pointed"></i> My Reports on bdnews24
+            </a>
+            <a href="https://instagram.com/sarkar_turzo" class="btn" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram Profile
+            </a>
         </div>
     </div>
+
 </body>
 </html>
