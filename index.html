@@ -26,7 +26,6 @@
 
         body {
             font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-            /* Exact ScreenShot Inspired Vibrant Lime Background (স্ক্রিনশটের সেই উজ্জ্বল ও প্রাণবন্ত ব্যাকগ্রাউন্ড) */
             background-color: #bfdb38; 
             color: #132a13;
             display: flex;
@@ -68,7 +67,6 @@
             background: #ffffff;
             padding: 45px 28px;
             border-radius: 32px;
-            /* Solid Bold High-Contrast Shadow from the Screenshot Style */
             box-shadow: 10px 10px 0px #132a13;
             border: 3.5px solid #132a13;
             text-align: center;
@@ -78,11 +76,38 @@
             position: relative;
         }
 
+        /* Music Floating Controller Button */
+        .music-controller {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            border: 2px solid #132a13;
+            box-shadow: 3px 3px 0px #132a13;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.2s ease;
+        }
+        .music-controller:hover {
+            transform: scale(1.05) translate(-1px, -1px);
+            box-shadow: 4px 4px 0px #132a13;
+        }
+        .music-controller i {
+            color: white;
+            font-size: 16px;
+        }
+
         /* The Ultimate Science & Melody Fusion Core Logo */
         .fusion-core {
             width: 110px;
             height: 110px;
-            background: #ff6b6b; /* Vibrant Coral Red */
+            background: #ff6b6b; 
             border-radius: 50%;
             margin: 0 auto 25px;
             display: flex;
@@ -99,7 +124,6 @@
             50% { transform: translateY(-6px); }
         }
 
-        /* Orbital Science Ring */
         .orbit-ring {
             position: absolute;
             width: 90px;
@@ -109,7 +133,6 @@
             animation: spinRing 4s linear infinite;
         }
 
-        /* Jumping Musical Beats */
         .melody-bars {
             display: flex;
             gap: 4px;
@@ -141,25 +164,43 @@
         p.username {
             font-size: 13px;
             color: #4f6d7a;
-            margin-bottom: 5px; /* নিচের টাইপিং ইফেক্টের জন্য মার্জিন একটু কমানো হয়েছে */
+            margin-bottom: 5px; 
             font-weight: 700;
             letter-spacing: 1px;
         }
 
-        /* টাইপিং ইফেক্টের জন্য সুন্দর স্টাইল */
         .typing-container {
             font-size: 14px;
             font-weight: 800;
-            color: #ff6b6b; /* আকর্ষণীয় কোরাল রেড কালার */
+            color: #ff6b6b; 
             height: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 12px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
+        /* Live Digital Clock & Day Widget Style */
+        .live-clock-widget {
+            background: #b7e4c7;
+            border: 2px solid #132a13;
+            box-shadow: 3px 3px 0px #132a13;
+            border-radius: 12px;
+            padding: 6px 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12.5px;
+            font-weight: 800;
+            color: #132a13;
+            margin-bottom: 25px;
+        }
+        .live-clock-widget i {
+            animation: spinRing 8s linear infinite;
+        }
+
         /* Deep Inspiring Cultural Proverb Box */
         .cultural-proverb {
-            background: #fff9db; /* Warm Pastel Yellow */
+            background: #fff9db; 
             border: 2.5px solid #132a13;
             padding: 14px 16px;
             margin-bottom: 30px;
@@ -176,7 +217,7 @@
             font-weight: 700;
         }
 
-        /* Color-Burst Multi-Color Information Stack (ভরে ভরে রঙের মেলা) */
+        /* Color-Burst Multi-Color Information Stack */
         .art-stack {
             text-align: left;
             margin-bottom: 35px;
@@ -195,12 +236,11 @@
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* Individual Bright & Beautiful Colors for Each Box (কোনো ল্যাব ফিল নেই, একদম খাঁটি আর্ট) */
-        .art-stack .art-chip:nth-child(1) { background-color: #a2d2ff; } /* Soft Ocean Blue */
-        .art-stack .art-chip:nth-child(2) { background-color: #ffafcc; } /* Cute Rose Pink */
-        .art-stack .art-chip:nth-child(3) { background-color: #ffcc00; } /* Sun-Kissed Yellow */
-        .art-stack .art-chip:nth-child(4) { background-color: #b7e4c7; } /* Mint Green */
-        .art-stack .art-chip:nth-child(5) { background-color: #cdb4db; } /* Sweet Lavender */
+        .art-stack .art-chip:nth-child(1) { background-color: #a2d2ff; } 
+        .art-stack .art-chip:nth-child(2) { background-color: #ffafcc; } 
+        .art-stack .art-chip:nth-child(3) { background-color: #ffcc00; } 
+        .art-stack .art-chip:nth-child(4) { background-color: #b7e4c7; } 
+        .art-stack .art-chip:nth-child(5) { background-color: #cdb4db; } 
 
         .art-chip:hover {
             transform: translate(-3px, -3px);
@@ -234,15 +274,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #132a13; /* Deep Forest Green */
-            color: #bfdb38; /* Bright Lime Contrast Text */
+            background: #132a13; 
+            color: #bfdb38; 
             text-decoration: none;
             padding: 16px 24px;
             border-radius: 18px;
             font-weight: 800;
             font-size: 15px;
             border: 3.5px solid #132a13;
-            box-shadow: 5px 5px 0px #ff6b6b; /* Pop Color Shadow */
+            box-shadow: 5px 5px 0px #ff6b6b; 
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             width: 100%;
             cursor: pointer;
@@ -260,7 +300,6 @@
             transition: transform 0.2s;
         }
 
-        /* Interactive Hover Action */
         .art-btn:hover {
             background: #ffffff;
             color: #132a13;
@@ -271,16 +310,39 @@
         .art-btn:hover i.arrow-click {
             transform: translateX(4px) scale(1.1);
         }
+
+        /* Mouse Sparkle Particles Dynamic Styling */
+        .sparkle-particle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 14px;
+            z-index: 9999;
+            animation: explodeParticle 0.8s ease-out forwards;
+        }
+        @keyframes explodeParticle {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(var(--mx), var(--my)) scale(0); opacity: 0; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Cultural Decorative Decorative Layer -->
+    <!-- Cultural Decorative Layer -->
     <div class="cultural-bg-art"></div>
+
+    <!-- Background Hidden Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mp3">
+    </audio>
 
     <!-- Main High-Contrast Colorful Card Window -->
     <div class="artistic-card animate__animated animate__jackInTheBox">
         
+        <!-- Music Dynamic floating Badge -->
+        <div class="music-controller" id="music-toggle" onclick="toggleMusic()">
+            <i class="fa-solid fa-music" id="music-icon"></i>
+        </div>
+
         <!-- The Fusion Art Core Logo Component -->
         <div class="fusion-core">
             <div class="orbit-ring"></div>
@@ -297,12 +359,18 @@
         <!-- টাইপিং ইফেক্টের এলিমেন্ট -->
         <div class="typing-container" id="typing-text"></div>
 
+        <!-- Live Clock & Day Widget Widget (৪ নম্বর ফিচার) -->
+        <div class="live-clock-widget">
+            <i class="fa-solid fa-clock-solid fa-spinner"></i>
+            <span id="live-time-display">Loading Time...</span>
+        </div>
+
         <!-- Deep Cultural Quote Proverb -->
         <div class="cultural-proverb">
             <p>"Science dissects the universe; Art weaves it together."</p>
         </div>
         
-        <!-- Beautiful Multi-Color Information Grid (ভরে ভরে রঙের মেলা) -->
+        <!-- Beautiful Multi-Color Information Grid -->
         <div class="art-stack">
             <div class="art-chip">
                 <div class="chip-icon"><i class="fa-solid fa-atom"></i></div>
@@ -328,7 +396,6 @@
 
         <!-- Heavy Duty High-Contrast Navigation Stack -->
         <div class="links-grid">
-            <!-- এক ক্লিকে দুই নিউজ ওপেন করার জন্য কাস্টম বাটন -->
             <button onclick="openMyStories()" class="art-btn">
                 <span class="btn-label-set">
                     <i class="fa-solid fa-book-open"></i>
@@ -373,33 +440,95 @@
                 charIndex++;
             }
 
-            // টাইপিং কার্সর ইফেক্ট (ঝলকানি বার '|')
             typingElement.innerHTML += '<span style="animation: blink 0.7s infinite;">|</span>';
 
             let typeSpeed = isDeleting ? 50 : 120;
 
             if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 1500; // পুরো শব্দ টাইপ হওয়ার পর ১.৫ সেকেন্ড থামবে
+                typeSpeed = 1500; 
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500; // পরের শব্দ শুরু হওয়ার আগে সামান্য বিরতি
+                typeSpeed = 500; 
             }
 
             setTimeout(type, typeSpeed);
         }
 
-        // কার্সর ব্লিংকিং অ্যানিমেশন স্টাইল ডাইনামিকালি যোগ করা
         const style = document.createElement('style');
         style.innerHTML = '@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }';
         document.head.appendChild(style);
 
-        // পেজ লোড হলে টাইপিং শুরু হবে
+        // ২. মিউজিক কন্ট্রোলার ফাংশন
+        const music = document.getElementById("bg-music");
+        const musicIcon = document.getElementById("music-icon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.className = "fa-solid fa-pause";
+                document.getElementById("music-toggle").style.animation = "spinRing 4s linear infinite";
+            } else {
+                music.pause();
+                musicIcon.className = "fa-solid fa-music";
+                document.getElementById("music-toggle").style.animation = "none";
+            }
+        }
+
+        // ৪. রিয়েল-টাইম লাইভ ক্লক ও দিন ফাংশন
+        function updateLiveTime() {
+            const now = new Date();
+            const options = { weekday: 'short', month: 'short', day: 'numeric' };
+            const dateString = now.toLocaleDateString('en-US', options);
+            const timeString = now.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            
+            document.getElementById("live-time-display").textContent = `${dateString} | ${timeString}`;
+        }
+        setInterval(updateLiveTime, 1000);
+
+        // ৫. মাউস কার্সরের পেছনে ম্যাজিক স্পার্কল ইফেক্ট
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.12) return; // স্ক্রিন কণা দিয়ে যেন জ্যাম না হয়ে যায়
+            createSparkle(e.clientX, e.clientY);
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            if (Math.random() > 0.12) return;
+            createSparkle(e.touches[0].clientX, e.touches[0].clientY);
+        });
+
+        function createSparkle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'sparkle-particle';
+            
+            // র্যান্ডম কালার এবং কণা নির্বাচন (তারা ও মিউজিক নোটস)
+            const shapes = ['✨', '🎵', '🎶', '✨', '🌸'];
+            particle.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+            
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            
+            // কণাগুলো ছড়িয়ে পড়ার র্যান্ডম দূরত্ব নির্ধারণ
+            const mx = (Math.random() - 0.5) * 80 + 'px';
+            const my = (Math.random() - 0.5) * 80 + 'px';
+            particle.style.setProperty('--mx', mx);
+            particle.style.setProperty('--my', my);
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        }
+
+        // পেজ লোড হলে রান হবে
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(type, 500);
+            updateLiveTime();
         });
     </script>
 
 </body>
-</html>
+                    </html>
+                    
