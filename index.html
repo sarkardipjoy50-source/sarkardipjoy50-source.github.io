@@ -141,9 +141,20 @@
         p.username {
             font-size: 13px;
             color: #4f6d7a;
-            margin-bottom: 25px;
+            margin-bottom: 5px; /* নিচের টাইপিং ইফেক্টের জন্য মার্জিন একটু কমানো হয়েছে */
             font-weight: 700;
             letter-spacing: 1px;
+        }
+
+        /* টাইপিং ইফেক্টের জন্য সুন্দর স্টাইল */
+        .typing-container {
+            font-size: 14px;
+            font-weight: 800;
+            color: #ff6b6b; /* আকর্ষণীয় কোরাল রেড কালার */
+            height: 20px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         /* Deep Inspiring Cultural Proverb Box */
@@ -283,6 +294,9 @@
         <h1>SARKAR DIPJOY</h1>
         <p class="username">@sarkar_turzo</p>
 
+        <!-- টাইপিং ইফেক্টের এলিমেন্ট -->
+        <div class="typing-container" id="typing-text"></div>
+
         <!-- Deep Cultural Quote Proverb -->
         <div class="cultural-proverb">
             <p>"Science dissects the universe; Art weaves it together."</p>
@@ -333,12 +347,58 @@
         </div>
     </div>
 
-    <!-- জাভাস্ক্রিপ্ট ফাংশন যা এক ক্লিকে দুটি নিউজ একসাথে ওপেন করবে -->
+    <!-- জাভাস্ক্রিপ্ট সেকশন -->
     <script>
+        // এক ক্লিকে দুটি নিউজ একসাথে ওপেন করার ফাংশন
         function openMyStories() {
             window.open("https://hello.bdnews24.com/hello-video/c34c93431d78", "_blank");
             window.open("https://hello.bdnews24.com/hello-video/143bd4dd7ea9", "_blank");
         }
+
+        // অটো-টাইপিং ইফেক্টের ফাংশন
+        const words = ["Science Student", "Child Journalist", "Tabla & Ukulele Player"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typing-text");
+
+        function type() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            // টাইপিং কার্সর ইফেক্ট (ঝলকানি বার '|')
+            typingElement.innerHTML += '<span style="animation: blink 0.7s infinite;">|</span>';
+
+            let typeSpeed = isDeleting ? 50 : 120;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 1500; // পুরো শব্দ টাইপ হওয়ার পর ১.৫ সেকেন্ড থামবে
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // পরের শব্দ শুরু হওয়ার আগে সামান্য বিরতি
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // কার্সর ব্লিংকিং অ্যানিমেশন স্টাইল ডাইনামিকালি যোগ করা
+        const style = document.createElement('style');
+        style.innerHTML = '@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }';
+        document.head.appendChild(style);
+
+        // পেজ লোড হলে টাইপিং শুরু হবে
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(type, 500);
+        });
     </script>
 
 </body>
