@@ -27,6 +27,9 @@
         body {
             font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
             background-color: #bfdb38; 
+            /* ১ নম্বর ফিচার: সার্কিট ডট প্যাটার্ন ব্যাকগ্রাউন্ড */
+            background-image: radial-gradient(#132a13 0.8px, transparent 0.8px);
+            background-size: 25px 25px;
             color: #132a13;
             display: flex;
             justify-content: center;
@@ -263,6 +266,23 @@
             letter-spacing: 0.2px;
         }
 
+        /* ২ নম্বর ফিচার: ডাইনামিক হ্যাকার কনসোল স্টাইল */
+        .hacker-console {
+            background: #132a13;
+            color: #39ff14; /* নিয়ন গ্রিন */
+            font-family: 'Courier New', monospace;
+            padding: 12px;
+            border-radius: 14px;
+            font-size: 11.5px;
+            margin-bottom: 25px;
+            text-align: left;
+            border: 2.5px solid #132a13;
+            box-shadow: 4px 4px 0px #ff6b6b;
+            height: 80px;
+            overflow-y: hidden;
+            line-height: 1.5;
+        }
+
         /* Bold High-Contrast Forest Green Action Buttons */
         .links-grid {
             display: flex;
@@ -359,9 +379,9 @@
         <!-- টাইপিং ইফেক্টের এলিমেন্ট -->
         <div class="typing-container" id="typing-text"></div>
 
-        <!-- Live Clock & Day Widget Widget (৪ নম্বর ফিচার) -->
+        <!-- Live Clock & Day Widget Widget (ফিক্স করা আইকন ক্লাস) -->
         <div class="live-clock-widget">
-            <i class="fa-solid fa-clock-solid fa-spinner"></i>
+            <i class="fa-solid fa-spinner fa-spin"></i>
             <span id="live-time-display">Loading Time...</span>
         </div>
 
@@ -392,6 +412,12 @@
                 <div class="chip-icon"><i class="fa-solid fa-cake-candles"></i></div>
                 <div class="chip-label">August 08</div>
             </div>
+        </div>
+
+        <!-- ২ নম্বর ফিচার: ডাইনামিক হ্যাকার কনসোল বক্স -->
+        <div class="hacker-console" id="console-log">
+            &gt;_ Initializing Sarkar_OS...<br>
+            &gt;_ Core Temp: 37°C | Status: Online
         </div>
 
         <!-- Heavy Duty High-Contrast Navigation Stack -->
@@ -460,7 +486,7 @@
         style.innerHTML = '@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }';
         document.head.appendChild(style);
 
-        // ২. মিউজিক কন্ট্রোলার ফাংশন
+        // মিউজিক কন্ট্রোলার ফাংশন
         const music = document.getElementById("bg-music");
         const musicIcon = document.getElementById("music-icon");
 
@@ -476,7 +502,7 @@
             }
         }
 
-        // ৪. রিয়েল-টাইম লাইভ ক্লক ও দিন ফাংশন
+        // রিয়েল-টাইম লাইভ ক্লক ও দিন ফাংশন
         function updateLiveTime() {
             const now = new Date();
             const options = { weekday: 'short', month: 'short', day: 'numeric' };
@@ -487,9 +513,29 @@
         }
         setInterval(updateLiveTime, 1000);
 
-        // ৫. মাউস কার্সরের পেছনে ম্যাজিক স্পার্কল ইফেক্ট
+        // হ্যাকার কনসোল লাইভ টেক্সট জেনারেটর ফাংশন
+        const consoleMessages = [
+            "&gt;_ Loading creative neural networks...",
+            "&gt;_ Syncing background melody logs...",
+            "&gt;_ Connecting to Bagerhat network node...",
+            "&gt;_ Fetching journalist reports from bdnews24...",
+            "&gt;_ Tuning Tabla frequencies: 440Hz...",
+            "&gt;_ Amplifying physics core data (10W)...",
+            "&gt;_ System Status: Fully Optimized & Alpha."
+        ];
+        let msgIndex = 0;
+        const consoleElement = document.getElementById("console-log");
+
+        function updateConsole() {
+            consoleElement.innerHTML += "<br>" + consoleMessages[msgIndex];
+            consoleElement.scrollTop = consoleElement.scrollHeight;
+            msgIndex = (msgIndex + 1) % consoleMessages.length;
+        }
+        setInterval(updateConsole, 3500);
+
+        // মাউস কার্সরের পেছনে ম্যাজিক স্পার্কল ইফেক্ট
         document.addEventListener('mousemove', function(e) {
-            if (Math.random() > 0.12) return; // স্ক্রিন কণা দিয়ে যেন জ্যাম না হয়ে যায়
+            if (Math.random() > 0.12) return; 
             createSparkle(e.clientX, e.clientY);
         });
 
@@ -502,14 +548,12 @@
             const particle = document.createElement('div');
             particle.className = 'sparkle-particle';
             
-            // র্যান্ডম কালার এবং কণা নির্বাচন (তারা ও মিউজিক নোটস)
             const shapes = ['✨', '🎵', '🎶', '✨', '🌸'];
             particle.textContent = shapes[Math.floor(Math.random() * shapes.length)];
             
             particle.style.left = x + 'px';
             particle.style.top = y + 'px';
             
-            // কণাগুলো ছড়িয়ে পড়ার র্যান্ডম দূরত্ব নির্ধারণ
             const mx = (Math.random() - 0.5) * 80 + 'px';
             const my = (Math.random() - 0.5) * 80 + 'px';
             particle.style.setProperty('--mx', mx);
@@ -530,5 +574,4 @@
     </script>
 
 </body>
-                    </html>
-                    
+</html>
